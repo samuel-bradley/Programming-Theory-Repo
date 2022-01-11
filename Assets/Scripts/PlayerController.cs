@@ -62,6 +62,5 @@ public class PlayerController : MonoBehaviour
     private void RotateToVelocity()
     {
         transform.LookAt(transform.position + rigidBody.velocity.normalized);
-        Debug.Log("Velocity is " + rigidBody.velocity + " and rotation is " + transform.rotation);
     }
 }

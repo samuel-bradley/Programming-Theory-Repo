@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
     protected float acceleration = 100.0f;
     protected float maxSpeed = 5.0f;
+    protected Rigidbody rigidBody;
 
-    private Rigidbody rigidBody;
     private GameObject player;
     private float maxRadius;
 
@@ -23,11 +23,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
-        {
-            AccelerateTowardsPlayer();
-            RotateTowardsPlayer();
-        }
+        ApplyMovement();
+        ApplyRotation();
         ConstrainSpeed();
         ConstrainPosition();
     }
@@ -38,15 +35,23 @@ public class Enemy : MonoBehaviour
         Destroy(other.gameObject);
     }
 
+    private void ApplyRotation()
+    {
+        transform.LookAt(rigidBody.velocity);
+    }
+
+    protected virtual void ApplyMovement()
+    {
+        if (player != null)
+        {
+            AccelerateTowardsPlayer();
+        }
+    }
+
     private void AccelerateTowardsPlayer()
     {
         var playerDirection = (player.transform.position - transform.position).normalized;
         rigidBody.AddForce(playerDirection * acceleration * Time.deltaTime, ForceMode.Force);
-    }
-
-    private void RotateTowardsPlayer()
-    {
-        transform.LookAt(player.transform);
     }
 
     // TODO factor out these constraints into a script common to Player and Enemy
@@ -61,7 +66,6 @@ public class Enemy : MonoBehaviour
 
     private void ConstrainPosition()
     {
-        Debug.Log(transform.position.magnitude);
         if (transform.position.magnitude > maxRadius)
         {
             transform.position = transform.position.normalized * maxRadius;

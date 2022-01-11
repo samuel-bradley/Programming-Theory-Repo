@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5760776647297887477}
   - component: {fileID: 5760776647297887476}
-  - component: {fileID: -6351965113092413037}
+  - component: {fileID: 4221373539673847412}
   - component: {fileID: 5760776647297887479}
   - component: {fileID: 7158963385725432753}
   m_Layer: 0
-  m_Name: FastEnemy
+  m_Name: EvasiveEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRadiusBeyondPlayArea: 25
---- !u!114 &-6351965113092413037
+--- !u!114 &4221373539673847412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5760776647297887433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431d93c2ee435e445900c7d119b86be8, type: 3}
+  m_Script: {fileID: 11500000, guid: f0f69287d478a2c40b5de9fc51608f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &5760776647297887479
