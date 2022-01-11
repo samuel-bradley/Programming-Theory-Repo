@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// INHERITANCE
 public class EvasiveEnemy : Enemy
 {
     private float evasionDistance = 10.0f;
 
+    // POLYMORPHISM
     override protected void ApplyMovement()
     {
         base.ApplyMovement();

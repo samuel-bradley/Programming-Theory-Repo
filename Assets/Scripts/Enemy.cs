@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    // ENCAPSULATION
+
     protected float acceleration = 100.0f;
     protected float maxSpeed = 5.0f;
     protected Rigidbody rigidBody;
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ABSTRACTION
         ApplyMovement();
         ApplyRotation();
         ConstrainSpeed();
