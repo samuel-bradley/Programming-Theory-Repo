@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private GameObject player;
-    public float acceleration;
-    public float maxSpeed;
+    protected float acceleration = 100.0f;
+    protected float maxSpeed = 5.0f;
 
     private Rigidbody rigidBody;
+    private GameObject player;
     private float maxRadius;
 
     // Start is called before the first frame update

@@ -152,19 +152,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86402ececf63ce4287a983c4f5b6524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5760776647297887433, guid: 0a37d4163ba86d3429ad0ffdc1466a1c, type: 3}
+  enemyPrefabs:
+  - {fileID: 5760776647297887433, guid: 0a37d4163ba86d3429ad0ffdc1466a1c, type: 3}
+  - {fileID: 5760776647297887433, guid: b38e9095b14f6d5458e4972e396e83ee, type: 3}
   asteroidPrefabs:
   - {fileID: 1948945267145651831, guid: e3f101fa2ededb64e98755be82358704, type: 3}
   - {fileID: 5714235905066352208, guid: b5998b28c5f05be42a11bad18542d4ea, type: 3}
   - {fileID: 3826576895639559869, guid: 32cd86b05d2188f448cbdb2e148daceb, type: 3}
-  enemySpawnInterval: 5
-  asteroidSpawnInterval: 1
-  minRadiusBeyondPlayArea: 10
-  maxRadiusBeyondPlayArea: 15
-  asteroidMinDriftSpeed: 1
-  asteroidMaxDriftSpeed: 10
-  asteroidMinRotationSpeed: 1
-  asteroidMaxRotationSpeed: 10
+  enemySpawnInterval: 0
+  asteroidSpawnInterval: 0
+  minRadiusBeyondPlayArea: 0
+  maxRadiusBeyondPlayArea: 0
+  asteroidMinDriftSpeed: 0
+  asteroidMaxDriftSpeed: 0
+  asteroidMinRotationSpeed: 0
+  asteroidMaxRotationSpeed: 0
 --- !u!4 &255379966
 Transform:
   m_ObjectHideFlags: 0

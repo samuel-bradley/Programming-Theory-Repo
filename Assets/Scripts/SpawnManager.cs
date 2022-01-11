@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     public GameObject[] asteroidPrefabs;
     public float enemySpawnInterval;
     public float asteroidSpawnInterval;
@@ -34,7 +34,8 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, RandomPosition(), enemyPrefab.transform.rotation);
+        var randomEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        Instantiate(randomEnemyPrefab, RandomPosition(), randomEnemyPrefab.transform.rotation);
     }
 
     private void SpawnAsteroid()
